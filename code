@@ -1,0 +1,38 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int i = 1, n, a, min = 10, max = - 1, uc;
+    
+    cin >> n;
+    
+    if(n == 0)
+    {
+        cout << 0;
+    }
+    else
+    {
+    while(n > 0)
+    {
+        uc = n % 10;
+        
+        if(uc > max)
+        {
+            max = uc;
+        }
+           
+        if(uc < min)
+        {
+            min = uc;
+        }
+        
+        n = n / 10;
+    }
+    
+    cout << min + max;
+    }
+
+    return 0;
+}
